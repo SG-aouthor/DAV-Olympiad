@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>D.A.V. CAE OLYMPIAD</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+        }
+        header {
+            background: #333;
+            color: #fff;
+            padding-top: 30px;
+            min-height: 70px;
+            border-bottom: #77aaff 3px solid;
+        }
+        header a {
+            color: #fff;
+            text-decoration: none;
+            text-transform: uppercase;
+            font-size: 16px;
+        }
+        #logo {
+            width: 100px;
+            height: auto;
+        }
+        .timer {
+            font-size: 20px;
+            margin: 20px 0;
+        }
+        .question {
+            margin: 20px 0;
+        }
+        .question h3 {
+            margin: 0;
+        }
+        .options {
+            list-style: none;
+            padding: 0;
+        }
+        .options li {
+            margin: 10px 0;
+        }
+        .btn-container {
+            margin: 20px 0;
+        }
+        .btn {
+            background: #333;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            margin: 5px;
+        }
+        .btn:hover {
+            background: #555;
+        }
+        .results {
+            font-size: 24px;
+            margin: 20px 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <img id="logo" src="logo.png" alt="D.A.V. CAE OLYMPIAD Logo">
+            <h1>D.A.V. CAE OLYMPIAD</h1>
+        </div>
+    </header>
+    <div class="container">
+        <div class="timer" id="timer">Time Remaining: 3:00:00</div>
+        <form id="quizForm">
+            <div id="questions">
+                <div class="question">
+                    <h3>Question 1: What is the capital of France?</h3>
+                    <ul class="options">
+                        <li><input type="radio" name="q1" value="A. Berlin"> A. Berlin</li>
+                        <li><input type="radio" name="q1" value="B. Madrid"> B. Madrid</li>
+                        <li><input type="radio" name="q1" value="C. Paris"> C. Paris</li>
+                        <li><input type="radio" name="q1" value="D. Rome"> D. Rome</li>
+                    </ul>
+                </div>
+                <div class="question">
+                    <h3>Question 2: What is the largest planet in our solar system?</h3>
+                    <ul class="options">
+                        <li><input type="radio" name="q2" value="A. Earth"> A. Earth</li>
+                        <li><input type="radio" name="q2" value="B. Mars"> B. Mars</li>
+                        <li><input type="radio" name="q2" value="C. Jupiter"> C. Jupiter</li>
+                        <li><input type="radio" name="q2" value="D. Saturn"> D. Saturn</li>
+                    </ul>
+                </div>
+                <div class="question">
+    <h3>Question 3: Which element has the chemical symbol 'O'?</h3>
+    <ul class="options">
+        <li><input type="radio" name="q3" value="A. Oxygen"> A. Oxygen</li>
+        <li><input type="radio" name="q3" value="B. Gold"> B. Gold</li>
+        <li><input type="radio" name="q3" value="C. Silver"> C. Silver</li>
+        <li><input type="radio" name="q3" value="D. Helium"> D. Helium</li>
+    </ul>
+</div>
+<div class="question">
+    <h3>Question 4: What is the capital of Japan?</h3>
+    <ul class="options">
+        <li><input type="radio" name="q4" value="A. Seoul"> A. Seoul</li>
+        <li><input type="radio" name="q4" value="B. Beijing"> B. Beijing</li>
+        <li><input type="radio" name="q4" value="C. Tokyo"> C. Tokyo</li>
+        <li><input type="radio" name="q4" value="D. Bangkok"> D. Bangkok</li>
+    </ul>
+</div>
+<div class="question">
+    <h3>Question 5: What is the boiling point of water?</h3>
+    <ul class="options">
+        <li><input type="radio" name="q5" value="A. 90°C"> A. 90°C</li>
+        <li><input type="radio" name="q5" value="B. 100°C"> B. 100°C</li>
+        <li><input type="radio" name="q5" value="C. 110°C"> C. 110°C</li>
+        <li><input type="radio" name="q5" value="D. 120°C"> D. 120°C</li>
+    </ul>
+</div>
+<div class="question">
+    <h3>Question 6: Who wrote 'Hamlet'?</h3>
+    <ul class="options">
+        <li><input type="radio" name="q6" value="A. Charles Dickens"> A. Charles Dickens</li>
+        <li><input type="radio" name="q6" value="B. J.K. Rowling"> B. J.K. Rowling</li>
+        <li><input type="radio" name="q6" value="C. William Shakespeare"> C. William Shakespeare</li>
+        <li><input type="radio" name="q6" value="D. Mark Twain"> D. Mark Twain</li>
+    </ul>
+</div>
+<div class="question">
+    <h3>Question 7: What is the hardest natural substance?</h3>
+    <ul class="options">
+        <li><input type="radio" name="q7" value="A. Gold"> A. Gold</li>
+        <li><input type="radio" name="q7" value="B. Silver"> B. Silver</li>
+        <li><input type="radio" name="q7" value="C. Diamond"> C. Diamond</li>
+        <li><input type="radio" name="q7" value="D. Iron"> D. Iron</li>
+    </ul>
+</div>
+<div class="question">
+    <h3>Question 8: Which planet is known as the Red Planet?</h3>
+    <ul class="options">
+        <li><input type="radio" name="q8" value="A. Venus"> A. Venus</li>
+        <li><input type="radio" name="q8" value="B. Mars"> B. Mars</li>
+        <li><input type="radio" name="q8" value="C. Jupiter"> C. Jupiter</li>
+        <li><input type="radio" name="q8" value="D. Saturn"> D. Saturn</li>
+    </ul>
+</div>
+<div class="question">
+    <h3>Question 9: Who painted the Mona Lisa?</h3>
+    <ul class="options">
+        <li><input type="radio" name="q9" value="A. Vincent van Gogh"> A. Vincent van Gogh</li>
+        <li><input type="radio" name="q9" value="B. Pablo Picasso"> B. Pablo Picasso</li>
+        <li><input type="radio" name="q9" value="C. Leonardo da Vinci"> C. Leonardo da Vinci</li>
+        <li><input type="radio" name="q9" value="D. Claude Monet"> D. Claude Monet</li>
+    </ul>
+</div>
+<div class="question">
+    <h3>Question 10: What is the smallest unit of life?</h3>
+    <ul class="options">
+        <li><input type="radio" name="q10" value="A. Atom"> A. Atom</li>
+        <li><input type="radio" name="q10" value="B. Molecule"> B. Molecule</li>
+        <li><input type="radio" name="q10" value="C. Cell"> C. Cell</li>
+        <li><input type="radio" name="q10" value="D. Organ"> D. Organ</li>
+    </ul>
+</div>
+<div class="question">
+    <h3>Question 11: What is the main ingredient in traditional Japanese miso soup?</h3>
+    <ul class="options">
+        <li><input type="radio" name="q11" value="A. Soybean paste"> A. Soybean paste</li>
+        <li><input type="radio" name="q11" value="B. Chicken"> B. Chicken</li>
+        <li><input type="radio" name="q11" value="C. Beef"> C. Beef</li>
+        <li><input type="radio" name="q11" value="D. Fish"> D. Fish</li>
+    </ul>
+</div>
+<div class="question">
+    <h3>Question 12: What is the chemical formula for water?</h3>
+    <ul class="options">
+        <li><input type="radio" name="q12" value="A. H2O"> A. H2O</li>
+        <li><input type="radio" name="q12" value="B. CO2"> B. CO2</li>
+        <li><input type="radio" name="q12" value="C. NaCl"> C. NaCl</li>
+        <li><input type="radio" name="q12" value="D. O2"> D. O2</li>
+    </ul>
+</div>
+<div class="question">
+    <h3>Question 14: Which planet is known as the Blue Planet?</h3>
+    <ul class="options">
+        <li><input type="radio" name="q14" value="A. Mars"> A. Mars</li>
+        <li><input type="radio" name="q14" value="B. Earth"> B. Earth</li>
+        <li><input type="radio" name="q14" value="C. Neptune"> C. Neptune</li>
+        <li><input type="radio" name="q14" value="D. Uranus"> D. Uranus</li>
+    </ul>
+</div>
+<div class="question">
+    <h3>Question 15: What is the primary gas found in the Earth's atmosphere?</h3>
+    <ul class="options">
+        <li><input type="radio" name="q15" value="A. Oxygen"> A. Oxygen</li>
+        <li><input type="radio" name="q15" value="B. Carbon Dioxide"> B. Carbon Dioxide</li>
+        <li><input type="radio" name="q15" value="C. Nitrogen"> C. Nitrogen</li>
+        <li><input type="radio" name="q15" value="D. Hydrogen"> D. Hydrogen</li>
+    </ul>
+</div>
+<div class="question">
+    <h3>Question 16: What is the square root of 64?</h3>
+    <ul class="options">
+        <li><input type="radio" name="q16" value="A. 6"> A. 6</li>
+        <li><input type="radio" name="q16" value="B. 7"> B. 7</li>
+        <li><input type="radio" name="q16" value="C. 8"> C. 8</li>
+        <li><input type="radio" name="q16" value="D. 9"> D. 9</li>
+    </ul>
+</div>
+<div class="question">
+    <h3>Question 17: What is the chemical symbol for gold?</h3>
+    <ul class="options">
+        <li><input type="radio" name="q17" value="A. Ag"> A. Ag</li>
+        <li><input type="radio" name="q17" value="B. Au"> B. Au</li>
+        <li><input type="radio" name="q17" value="C. Pb"> C. Pb</li>
+        <li><input type="radio" name="q17" value="D. Fe"> D. Fe</li>
+    </ul>
+</div>
+<div class="question">
+    <h3>Question 18: Who is the author of '1984'?</h3>
+    <ul class="options">
+        <li><input type="radio" name="q18" value="A. Aldous Huxley"> A. Aldous Huxley</li>
+        <li><input type="radio" name="q18" value="B. George Orwell"> B. George Orwell</li>
+        <li><input type="radio" name="q18" value="C. J.R.R. Tolkien"> C. J.R.R. Tolkien</li>
+        <li><input type="radio" name="q18" value="D. F. Scott Fitzgerald"> D. F. Scott Fitzgerald</li>
+    </ul>
+</div>
+<div class="question">
+    <h3>Question 19: What is the most abundant gas in the Earth's atmosphere?</h3>
+    <ul class="options">
+        <li><input type="radio" name="q19" value="A. Oxygen"> A. Oxygen</li>
+        <li><input type="radio" name="q19" value="B. Carbon Dioxide"> B. Carbon Dioxide</li>
+        <li><input type="radio" name="q19" value="C. Nitrogen"> C. Nitrogen</li>
+        <li><input type="radio" name="q19" value="D. Hydrogen"> D. Hydrogen</li>
+    </ul>
+</div>
+<div class="question">
+    <h3>Question 20: What is the speed of light in a vacuum?</h3>
+    <ul class="options">
+        <li><input type="radio" name="q20" value="A. 300,000 km/s"> A. 300,000 km/s</li>
+        <li><input type="radio" name="q20" value="B. 150,000 km/s"> B. 150,000 km/s</li>
+        <li><input type="radio" name="q20" value="C. 450,000 km/s"> C. 450,000 km/s</li>
+        <li><input type="radio" name="q20" value="D. 600,000 km/s"> D. 600,000 km/s</li>
+    </ul>
+</div>
+<div class="question">
+    <h3>Question 21: Who was the first person to walk on the moon?</h3>
+    <ul class="options">
+        <li><input type="radio" name="q21" value="A. Yuri Gagarin"> A. Yuri Gagarin</li>
+        <li><input type="radio" name="q21" value="B. Neil Armstrong"> B. Neil Armstrong</li>
+        <li><input type="radio" name="q21" value="C. Buzz Aldrin"> C. Buzz Aldrin</li>
+        <li><input type="radio" name="q21" value="D. Michael Collins"> D. Michael Collins</li>
+    </ul>
+</div>
+<div class="question">
+    <h3>Question 22: What is the chemical symbol for sodium?</h3>
+    <ul class="options">
+        <li><input type="radio" name="q22" value="A. Na"> A. Na</li>
+        <li><input type="radio" name="q22" value="B. S"> B. S</li>
+        <li><input type="radio" name="q22" value="C. So"> C. So</li>
+        <li><input type="radio" name="q22" value="D. Sa"> D. Sa</li>
+    </ul>
+</div>
+<div class="question">
+    <h3>Question 23: What is the most widely spoken language in the world?</h3>
+    <ul class="options">
+        <li><input type="radio" name="q23" value="A. English"> A. English</li>
+        <li><input type="radio" name="q23" value="B. Spanish"> B. Spanish</li>
+        <li><input type="radio" name="q23" value="C. Mandarin Chinese"> C. Mandarin Chinese</li>
+        <li><input type="radio" name="q23" value="D. Hindi"> D. Hindi</li>
+    </ul>
+</div>
+<div class="question">
+    <h3>Question 24: Which organ is responsible for pumping blood throughout the human body?</h3>
+    <ul class="options">
+        <li><input type="radio" name="q24" value="A. Liver"> A. Liver</li>
+        <li><input type="radio" name="q24" value="B. Lungs"> B. Lungs</li>
+        <li><input type="radio" name="q24" value="C. Heart"> C. Heart</li>
+        <li><input type="radio" name="q24" value="D. Kidney"> D. Kidney</li>
+    </ul>
+</div>
+<div class="question">
+    <h3>Question 25: What is the capital of Australia?</h3>
+    <ul class="options">
+        <li><input type="radio" name="q25" value="A. Sydney"> A. Sydney</li>
+        <li><input type="radio" name="q25" value="B. Melbourne"> B. Melbourne</li>
+        <li><input type="radio" name="q25" value="C. Canberra"> C. Canberra</li>
+        <li><input type="radio" name="q25" value="D. Brisbane"> D. Brisbane</li>
+    </ul>
+</div>
+
+
+                <div class="question">
+                    <h3>Question 30: Which element has the chemical symbol 'O'?</h3>
+                    <ul class="options">
+                        <li><input type="radio" name="q30" value="A. Oxygen"> A. Oxygen</li>
+                        <li><input type="radio" name="q30" value="B. Gold"> B. Gold</li>
+                        <li><input type="radio" name="q30" value="C. Silver"> C. Silver</li>
+                        <li><input type="radio" name="q30" value="D. Helium"> D. Helium</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="btn-container">
+                <button type="button" class="btn" onclick="saveProgress()">Save</button>
+                <button type="button" class="btn" onclick="submitQuiz()">Submit</button>
+            </div>
+        </form>
+        <div id="result" class="results"></div>
+    </div>
+    <script>
+        // Timer
+        let time = 3 * 60 * 60; // 3 hours in seconds
+        const timerElement = document.getElementById('timer');
+        const interval = setInterval(() => {
+            const hours = Math.floor(time / 3600);
+            const minutes = Math.floor((time % 3600) / 60);
+            const seconds = time % 60;
+            timerElement.textContent = `Time Remaining: ${hours}:${minutes}:${seconds}`;
+            time--;
+            if (time < 0) {
+                clearInterval(interval);
+                submitQuiz();
+            }
+        }, 1000);
+
+        function saveProgress() {
+            alert('Your progress has been saved!');
+        }
+
+        function submitQuiz() {
+            clearInterval(interval);
+            const form = document.getElementById('quizForm');
+            const formData = new FormData(form);
+            let score = 0;
+            const answers = {
+                q1: 'C. Paris',
+                q2: 'C. Jupiter',
+                // Add correct answers for other questions here...
+                q30: 'A. Oxygen'
+            };
+            for (const [key, value] of formData.entries()) {
+                if (answers[key] === value) {
+                    score++;
+                }
+            }
+            document.getElementById('result').textContent = `Your score is: ${score} out of ${Object.keys(answers).length}`;
+        }
+    </script>
+</body>
+</html>
